@@ -22272,3 +22272,10 @@ page-home .ionic-logo:before {
     -webkit-transform: rotate(360deg);
   }
 }
+
+page-menu .ion-spinner * {
+  width: 38px;
+  height: 38px;
+  stroke: #444;
+  fill: #222;
+}

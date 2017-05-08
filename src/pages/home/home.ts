@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
-import { NavController } from 'ionic-angular';
+import { NavController, ModalController, ViewController } from 'ionic-angular';
 
-//import { HeaderColor } from 'ionic-native/';
+import { MenuPage } from '../menu/menu';
 
 
 @Component({
@@ -11,21 +11,16 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-    constructor(public navCtrl: NavController) {
-        //HeaderColor.tint("#f53d3d");
+    constructor(public navCtrl: NavController, public modalCtrl: ModalController) {
+       
   }
   
   onLink(url: string) {
       window.open(url);
   }
 
-
-
-  //presentProfileModal() {
-  //    let profileModal = this.modalCtrl.create(MenuPage);
-  //    profileModal.onDidDismiss(data => {
-  //        console.log(data);
-  //    });
-  //    profileModal.present();
-  //}
+  presentModalMenu() {
+      let profileModal = this.modalCtrl.create(MenuPage);
+      profileModal.present();
+  }
 }

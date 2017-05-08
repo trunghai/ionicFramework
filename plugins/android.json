@@ -7,40 +7,27 @@
         "files": {}
     },
     "installed_plugins": {
-        "cordova-plugin-actionsheet": {
-            "PACKAGE_NAME": "io.cordova.myapp6d3547"
-        },
         "cordova-plugin-console": {
-            "PACKAGE_NAME": "io.cordova.myapp6d3547"
+            "PACKAGE_NAME": "io.cordova.myapp59edbb"
         },
         "cordova-plugin-device": {
-            "PACKAGE_NAME": "io.cordova.myapp6d3547"
-        },
-        "cordova-plugin-http": {
-            "PACKAGE_NAME": "io.cordova.myapp6d3547"
-        },
-        "cordova-plugin-network-information": {
-            "PACKAGE_NAME": "io.cordova.myapp6d3547"
+            "PACKAGE_NAME": "io.cordova.myapp59edbb"
         },
         "cordova-plugin-splashscreen": {
-            "PACKAGE_NAME": "io.cordova.myapp6d3547"
+            "PACKAGE_NAME": "io.cordova.myapp59edbb"
         },
         "cordova-plugin-statusbar": {
-            "PACKAGE_NAME": "io.cordova.myapp6d3547"
+            "PACKAGE_NAME": "io.cordova.myapp59edbb"
         },
         "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "io.cordova.myapp6d3547"
+            "PACKAGE_NAME": "io.cordova.myapp59edbb"
         },
         "ionic-plugin-keyboard": {
-            "PACKAGE_NAME": "io.cordova.myapp6d3547"
+            "PACKAGE_NAME": "io.cordova.myapp59edbb"
+        },
+        "cordova-plugin-spinner-dialog": {
+            "PACKAGE_NAME": "io.cordova.myapp59edbb"
         }
     },
-    "dependent_plugins": {
-        "cordova-plugin-compat": {
-            "PACKAGE_NAME": "io.cordova.myapp6d3547"
-        },
-        "cordova-plugin-file": {
-            "PACKAGE_NAME": "io.cordova.myapp6d3547"
-        }
-    }
+    "dependent_plugins": {}
 }
