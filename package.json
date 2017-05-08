@@ -39,6 +39,9 @@
     "cordova-plugin-statusbar",
     "cordova-plugin-device",
     "cordova-plugin-splashscreen",
+    "cordova-plugin-http",
+    "cordova-plugin-actionsheet",
+    //"cordova-plugin-headercolor",
     "ionic-plugin-keyboard"
   ],
   "cordovaPlatforms": [],

@@ -267,9 +267,9 @@ function handleOrientationSettings(platformConfig, infoPlist) {
             infoPlist['UISupportedInterfaceOrientations'] = [ 'UIInterfaceOrientationPortrait', 'UIInterfaceOrientationPortraitUpsideDown', 'UIInterfaceOrientationLandscapeLeft', 'UIInterfaceOrientationLandscapeRight' ];
             infoPlist['UISupportedInterfaceOrientations~ipad'] = [ 'UIInterfaceOrientationPortrait', 'UIInterfaceOrientationPortraitUpsideDown', 'UIInterfaceOrientationLandscapeLeft', 'UIInterfaceOrientationLandscapeRight' ];
             break;
-        case 'default':
-            infoPlist['UISupportedInterfaceOrientations'] = [ 'UIInterfaceOrientationPortrait', 'UIInterfaceOrientationLandscapeLeft', 'UIInterfaceOrientationLandscapeRight' ];
-            infoPlist['UISupportedInterfaceOrientations~ipad'] = [ 'UIInterfaceOrientationPortrait', 'UIInterfaceOrientationPortraitUpsideDown', 'UIInterfaceOrientationLandscapeLeft', 'UIInterfaceOrientationLandscapeRight' ];
+        default:
+            delete infoPlist['UISupportedInterfaceOrientations'];
+            delete infoPlist['UISupportedInterfaceOrientations~ipad'];
             delete infoPlist['UIInterfaceOrientation'];
     }
 }
@@ -310,6 +310,7 @@ function mapIconResources(icons, iconsDir) {
     // See https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/IconMatrix.html
     // for launch images sizes reference.
     var platformIcons = [
+        {dest: 'icon-60.png', width: 60, height: 60},
         {dest: 'icon-60@2x.png', width: 120, height: 120},
         {dest: 'icon-60@3x.png', width: 180, height: 180},
         {dest: 'icon-76.png', width: 76, height: 76},
@@ -471,7 +472,7 @@ function getOrientationValue(platformConfig) {
 
     var orientation = platformConfig.getPreference('orientation');
     if (!orientation) {
-        return '';
+        return ORIENTATION_DEFAULT;
     }
 
     orientation = orientation.toLowerCase();
